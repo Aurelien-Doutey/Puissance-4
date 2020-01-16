@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="p4.css">
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="p4.js"></script>
+        <title>Puissance 4</title>
+    </head>
+    <body>
+        <h1 id="title">Puissance 4</h1>
+        <button id="newGame" class="btn btn-secondary">Nouvelle Partie</button><br><br>
+        <form action="insert.php" method="post" class="form" id="p4-form">
+            <div class="form">
+                <label for="nbjeton">Nombre de jetons victoire :</label>
+                <input type="number" name="nbjeton" id="nbjeton" min="2" max="8" value="4">
+            </div>
+            <div class="form">
+              <label for="col">Nombre de colonnes : </label>
+              <input type="number" name="col" id="col" min="1" max="14" value="7">
+            </div>
+            <div class="form">
+              <label for="lgn">Nombre de lignes : </label>
+              <input type="number" name="lgn" id="lgn" min="1" max="10" value="6">
+            </div><br>
+            <div class="form">
+              <label for="pl1">Joueur 1 : </label>
+              <input type="text" name="pl1-name" id="pl1-name">
+              <select style="background-color: red;" name="pl1" id="pl1">
+                <option style="background-color: red;" selected="selected" value="red">red</option>
+                <option style="background-color: yellow;" value="yellow">yellow</option>
+                <option style="background-color: green;" value="green">green</option>
+                <option style="background-color: blue; color: white" value="blue">blue</option>
+                <option style="background-color: purple; color: white"value="purple">purple</option>
+                <option style="background-color: pink;" value="pink">pink</option>
+                <option style="background-color: brown; color: white"value="brown">brown</option>
+                <option style="background-color: black; color: white"value="black">black</option>
+              </select>
+            </div>
+            <div class="form">
+                <label for="pl2">Joueur 2 : </label>
+                <input type="text" name="pl2-name" id="pl2-name">
+                <select style="background-color: yellow;" name="pl2" id="pl2">
+                    <option style="background-color: red;" value="red">red</option>
+                    <option style="background-color: yellow;" selected="selected" value="yellow">yellow</option>
+                    <option style="background-color: green;" value="green">green</option>
+                    <option style="background-color: blue; color: white" value="blue">blue</option>
+                    <option style="background-color: purple; color: white" value="purple">purple</option>
+                    <option style="background-color: pink;" value="pink">pink</option>
+                    <option style="background-color: brown; color: white"value="brown">brown</option>
+                    <option style="background-color: black; color: white"value="black">black</option>
+                </select>
+            </div>
+            <div class="form">
+              <input type="button" class="btn btn-primary" value="Jouer!" id="jouer">
+            </div>
+          </form>
+          <button id="restart" class="btn btn-success">Rejouer</button><br><br>
+          <h5 id="score1"></h5><h5 id="separation">   -   </h5><h5 id="score2"></h5><br>
+          <div id="game"></div>
+          <h4 id="playerTurn"></h4>
+    </body>
+</html>
